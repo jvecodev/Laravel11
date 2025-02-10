@@ -33,9 +33,9 @@ services:
         platform: linux/x86_64
         restart: unless-stopped
         environment:
-            MYSQL_DATABASE: ${DB_DATABASE:-laravel}
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
-            MYSQL_PASSWORD: ${DB_PASSWORD:-userpass}
+            MYSQL_DATABASE: ${DB_DATABASE:-laravel} #Após o hyphen, valores padroes
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root} #Após o hyphen, valores padroes
+            MYSQL_PASSWORD: ${DB_PASSWORD:-userpass} #Após o hyphen, valores padroes
             MYSQL_USER: ${DB_USERNAME:-username}
         volumes:
             - ./.docker/mysql/dbdata:/var/lib/mysql
